@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Digital Market - Approval Process</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+    }
+
+    /* Sticky Header */
+    header {
+      position: sticky;
+      top: 0;
+      background-color: white;
+      padding: 10px 0;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      z-index: 1000;
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      color: #333;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #333;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+
+    h2 {
+      text-align: center;
+      color: #444;
+    }
+
+    .note {
+      text-align: center;
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 30px;
+    }
+
+    .step-card {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 12px;
+      background-color: #fff;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .step-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .step-card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .step-card div {
+      flex: 1;
+    }
+
+    .step-card h3 {
+      margin: 0 0 8px 0;
+      color: #333;
+    }
+
+    .step-card p {
+      margin: 0 0 10px 0;
+      color: #555;
+      font-size: 14px;
+    }
+
+    .step-card button {
+      padding: 10px 16px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background 0.3s;
+    }
+
+    .step-card button:hover {
+      background-color: #45a049;
+    }
+
+    /* Different background for approval step */
+    .approved {
+      background-color: #e6ffe6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Digital Market</h1>
+    <nav>
+      <a href="marketplace.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="submit.html">Submit</a>
+      <a href="approval.html">Approval</a>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Approval Process</h2>
+    <p class="note">Follow the steps below to see how your product moves through the approval process.</p>
+
+    <!-- Step 1: Submit Product -->
+    <div class="step-card">
+      <img src="admin.jpg" alt="Submit Product">
+      <div>
+        <h3>Step 1: Submit Product</h3>
+        <p>Add your product details and upload images for admin review.</p>
+        <button onclick="window.location.href='submit.html'">Go to Submit Page</button>
+      </div>
+    </div>
+
+    <!-- Step 2: Review by Admin -->
+    <div class="step-card">
+      <img src="admin1.jpg" alt="Review by Admin">
+      <div>
+        <h3>Step 2: Review by Admin</h3>
+        <p>The admin carefully checks all submitted details, images, and pricing for accuracy and quality.</p>
+        <button onclick="window.location.href='review.html'">See Review Details</button>
+      </div>
+    </div>
+
+    <!-- Step 3: Approval -->
+    <div class="step-card approved">
+      <img src="image 3.jpg" alt="Approval">
+      <div>
+        <h3>Step 3: Approval</h3>
+        <p>Congratulations! Your product has been approved and is now live on the marketplace.</p>
+        <button onclick="window.location.href='product.html'">Go to My Products</button>
+      </div>
+    </div>
+
+    <!-- Step 4: Notification -->
+    <div class="step-card">
+      <img src="image 4.html" alt="Notification">
+      <div>
+        <h3>Step 4: Notification</h3>
+        <p>You will receive a notification once your product is approved, so you stay updated.</p>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

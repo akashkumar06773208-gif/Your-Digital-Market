@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Akash Kumar</title>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      overflow-x: hidden;
+      background-attachment: fixed;
+    }
+
+    .contact-container {
+      max-width: 700px;
+      margin: 100px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      box-shadow: 0 0 25px rgba(0,0,0,0.4);
+      padding: 40px 50px;
+      text-align: center;
+      backdrop-filter: blur(12px);
+    }
+
+    h1 {
+      font-size: 2.2rem;
+      margin-bottom: 10px;
+      color: #00ffff;
+    }
+
+    p {
+      color: #cfd8dc;
+      margin-bottom: 40px;
+      font-size: 1rem;
+    }
+
+    .form-group {
+      text-align: left;
+      margin-bottom: 25px;
+    }
+
+    label {
+      font-size: 1rem;
+      color: #80deea;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      outline: none;
+      font-size: 1rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    textarea {
+      resize: none;
+      height: 120px;
+    }
+
+    button {
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+      border: none;
+      padding: 14px 40px;
+      font-size: 1.1rem;
+      color: #fff;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: linear-gradient(90deg, #0072ff, #00c6ff);
+      transform: scale(1.05);
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #90a4ae;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="contact-container">
+    <h1>Contact Akash Kumar</h1>
+    <p>Have any questions, ideas, or opportunities? I'd love to hear from you.  
+       Let's connect and make something impactful together.</p>
+
+    <form>
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" value="Akash Kumar" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" value="akashkumar06773208@gmail.com" readonly>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" readonly>I believe every idea starts small — this website is one of my steps toward creating something meaningful that connects people, ideas, and opportunities.</textarea>
+      </div>
+
+      <div class="form-group">
+        <label for="business">Business Type</label>
+        <select id="business">
+          <option selected>Entrepreneur / Creator</option>
+          <option>Marketplace Builder</option>
+          <option>Student Innovator</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+  <footer>
+    &copy; 2025 Akash Kumar | All Rights Reserved
+  </footer>
+
+</body>
+</html>

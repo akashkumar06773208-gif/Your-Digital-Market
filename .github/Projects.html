@@ -1,0 +1,179 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Digital Market - Projects</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #0e0e0e;
+      color: white;
+    }
+
+    header {
+      background: #111;
+      padding: 15px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 0 15px rgba(0,0,0,0.5);
+    }
+
+    header h1 {
+      color: #00e0ff;
+      margin: 0;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #00e0ff;
+    }
+
+    .projects-section {
+      text-align: center;
+      margin-top: 60px;
+    }
+
+    .projects-section h2 {
+      font-size: 2.2rem;
+      margin-bottom: 20px;
+      color: #00e0ff;
+    }
+
+    .project-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      justify-items: center;
+    }
+
+    .project-card {
+      background: linear-gradient(145deg, #1c1c1c, #272727);
+      border-radius: 20px;
+      overflow: hidden;
+      width: 320px;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 0 15px rgba(0,255,255,0.1);
+    }
+
+    .project-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px rgba(0,255,255,0.3);
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .project-info {
+      padding: 20px;
+    }
+
+    .project-info h3 {
+      margin: 0 0 10px;
+      color: #00e0ff;
+    }
+
+    .project-info p {
+      color: #ccc;
+      font-size: 0.95rem;
+    }
+
+    .collab-section {
+      text-align: center;
+      padding: 50px;
+      background: linear-gradient(135deg, #1a1a1a, #202020);
+      margin-top: 50px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+
+    .collab-section h2 {
+      color: #00e0ff;
+      font-size: 2rem;
+    }
+
+    .collab-section p {
+      color: #ccc;
+      font-size: 1rem;
+      margin: 15px 0 25px;
+    }
+
+    .collab-section a {
+      background: #00e0ff;
+      color: black;
+      padding: 12px 30px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.3s ease;
+    }
+
+    .collab-section a:hover {
+      background: #00b8cc;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Your Digital Market</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <section class="projects-section">
+    <h2>Our Featured Projects</h2>
+    <div class="project-container">
+
+      <div class="project-card">
+        <img src="project1.jpg" alt="Marketplace Platform">
+        <div class="project-info">
+          <h3>Marketplace Platform</h3>
+          <p>A complete product listing and approval system for small businesses to reach customers online.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="project2.jpg" alt="Admin Review System">
+        <div class="project-info">
+          <h3>Admin Review System</h3>
+          <p>Smart approval system where admin verifies products and stores before publishing them live.</p>
+        </div>
+      </div>
+
+      <div class="project-card">
+        <img src="project3.jpg" alt="Creator Dashboard">
+        <div class="project-info">
+          <h3>Creator Dashboard</h3>
+          <p>A dynamic dashboard for store owners to manage products, performance stats, and engagement.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="collab-section">
+    <h2>Want to Collaborate?</h2>
+    <p>Have an idea that can revolutionize digital marketplaces? Let’s connect and build together.</p>
+    <a href="contact.html">Contact Me</a>
+  </section>
+
+</body>
+</html>

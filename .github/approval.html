@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Approval Process - Your Digital Market</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins', sans-serif; }
+    body { background:#111; color:white; }
+
+    header { background: rgba(0,0,0,0.7); padding:15px 40px; display:flex; justify-content:space-between; align-items:center; position: sticky; top:0; z-index:10; }
+    header h1 { font-size:1.8em; color:#ff8c00; }
+    nav a { color:white; text-decoration:none; margin:0 15px; font-weight:500; transition:0.3s; }
+    nav a:hover { color:#ff8c00; }
+
+    .container { max-width:1000px; margin:50px auto; padding:0 20px; }
+
+    h2 { text-align:center; margin-bottom:50px; color:#ff8c00; font-size:2em; }
+
+    .feature-cards { display:flex; flex-wrap:wrap; justify-content:center; gap:25px; }
+    .feature-card { background: rgba(255,255,255,0.05); padding:25px; border-radius:15px; width:220px; text-align:center; transition:0.3s; }
+    .feature-card img { width:80px; height:80px; margin-bottom:15px; object-fit:contain; }
+    .feature-card h4 { color:#ff8c00; margin-bottom:10px; font-size:1.1em; }
+    .feature-card p { color:#ddd; font-size:0.95em; line-height:1.4em; }
+
+    /* Hover effect */
+    .feature-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(255,140,0,0.5);
+    }
+
+    @media(max-width:768px){
+      .feature-card { width:45%; }
+    }
+
+    @media(max-width:480px){
+      .feature-card { width:90%; }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Your Digital Market</h1>
+    <nav>
+      <a href="marketplace.html">Home</a>
+      <a href="About Marketplace.html">About</a>
+      <a href="submit.html">Submit</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Approval Process</h2>
+    <div class="feature-cards">
+      
+      <div class="feature-card">
+        <img src="image 1.jpg" alt="Submit Product">
+        <h4>Submit Product</h4>
+        <p>Fill out the product details including description, price, and image for your customers.</p>
+  <button onclick="window.location.href='product.html'" style="background:#ff8c00;padding:8px 15px;border:none;border-radius:20px;color:white;cursor:pointer;margin-top:10px;">
+            Submit Product Now
+          </button>
+      </div>
+
+      <div class="feature-card">
+        <img src="image 2.jpg" alt="Review">
+        <h4>Review by Admin</h4>
+        <p>Our team reviews your submission for quality, accuracy, and proper formatting.</p>
+<button onclick="window.location.href='review.html'" style="background:#ff8c00;padding:8px 15px;border:none;border-radius:20px;color:white;cursor:pointer;margin-top:10px;">
+           Review Now
+          </button>
+      </div>
+
+      <div class="feature-card">
+        <img src="image 3.jpg" alt="Approval">
+        <h4>Approval</h4>
+        <p>Once approved, your product will be live on the marketplace and visible to all users.</p>
+<button onclick="window.location.href='approved.html'" style="background:#ff8c00;padding:8px 15px;border:none;border-radius:20px;color:white;cursor:pointer;margin-top:10px;">
+           Approve Now
+      </div>
+
+      <div class="feature-card">
+        <img src="image 4.html" alt="Notification">
+        <h4>Notification</h4>
+        <p>You will receive a notification once your product is approved and ready for customers.</p>
+<button onclick="window.location.href='noti.html'" style="background:#ff8c00;padding:8px 15px;border:none;border-radius:20px;color:white;cursor:pointer;margin-top:10px;">
+           Check Notification 
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,254 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>About the Creator — Your Digital Market</title>
+<style>
+  :root{
+    --accent:#ff8c00;
+    --muted:#6b7280;
+    --bg1:#0f172a;
+    --bg2:#07103a;
+    --card:#0b1220;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0;
+    font-family:Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    color:#e6eef8;
+    background: linear-gradient(180deg,var(--bg1) 0%, #07103a 55%, #07103a 100%);
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+    min-height:100vh;
+    display:flex;
+    align-items:flex-start;
+    justify-content:center;
+    padding:30px 20px;
+  }
+
+  /* Animated abstract blobs in background */
+  .bg-blobs{
+    position:fixed;
+    inset:0;
+    z-index:0;
+    overflow:hidden;
+    pointer-events:none;
+  }
+  .blob{
+    position:absolute;
+    filter:blur(60px) saturate(120%);
+    opacity:0.65;
+    mix-blend-mode:screen;
+    transform:translate3d(0,0,0);
+    will-change: transform;
+  }
+  .b1{width:520px;height:520px;background:linear-gradient(135deg,#ff8c00,#ff3d00);left:-120px;top:-80px;animation:move1 14s ease-in-out infinite;}
+  .b2{width:420px;height:420px;background:linear-gradient(135deg,#00c2ff,#0066ff);right:-100px;top:40px;animation:move2 18s ease-in-out infinite;}
+  .b3{width:360px;height:360px;background:linear-gradient(135deg,#8e44ff,#3b82f6);left:30%;bottom:-120px;animation:move3 16s ease-in-out infinite;}
+  @keyframes move1{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(40px) rotate(15deg)}100%{transform:translateY(0) rotate(0deg)}}
+  @keyframes move2{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(-30px) rotate(-10deg)}100%{transform:translateY(0) rotate(0deg)}}
+  @keyframes move3{0%{transform:translateY(0) rotate(0deg)}50%{transform:translateY(25px) rotate(8deg)}100%{transform:translateY(0) rotate(0deg)}}
+  .blob::after{content:"";display:block;width:100%;height:100%;border-radius:50%}
+
+  /* Main card */
+  .card {
+    position:relative;
+    z-index:2;
+    width:1100px;
+    max-width:1100px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    border:1px solid rgba(255,255,255,0.04);
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow: 0 10px 40px rgba(2,6,23,0.6);
+    display:grid;
+    grid-template-columns: 360px 1fr;
+    gap:0;
+    backdrop-filter: blur(6px) saturate(120%);
+  }
+
+  /* Left profile */
+  .left {
+    padding:36px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.03));
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:18px;
+  }
+  .avatar{
+    width:220px;height:220px;border-radius:18px;overflow:hidden;border:4px solid rgba(255,255,255,0.06);
+    box-shadow: 0 8px 30px rgba(2,6,23,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+  }
+  .avatar img{width:100%;height:100%;object-fit:cover;display:block}
+  .name{font-size:1.6rem;font-weight:700;color:#fff;text-align:center}
+  .title{color:var(--muted);font-size:0.95rem;text-align:center}
+  .contact{
+    width:100%;
+    margin-top:6px;
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .contact .item{display:flex;justify-content:space-between;color:#cfe7ff;padding:8px 12px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(0,0,0,0.02));font-weight:600}
+  .cta-row{display:flex;gap:10px;margin-top:12px}
+  .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:700}
+  .btn-primary{background:var(--accent);color:#0b0b0b;box-shadow:0 6px 18px rgba(255,140,0,0.18)}
+  .btn-ghost{background:transparent;color:#cfe7ff;border:1px solid rgba(255,255,255,0.04)}
+
+  /* Right content area */
+  .right{padding:34px 42px}
+  .section{margin-bottom:22px}
+  .section h3{margin:0 0 10px;color:var(--accent);font-size:1.05rem}
+  .meta-table{width:100%;border-collapse:collapse;background:transparent}
+  .meta-table td{padding:10px 12px;border-radius:8px;color:#d8eaff}
+  .meta-table tr td:first-child{width:180px;color:#9fbbe6;font-weight:700}
+  .bio{color:#dfefff}
+  .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .chip{padding:8px 10px;border-radius:999px;background:rgba(255,255,255,0.03);color:#d7ecff;font-weight:600;border:1px solid rgba(255,255,255,0.03)}
+  .timeline{margin-top:12px;border-left:2px dashed rgba(255,255,255,0.03);padding-left:18px}
+  .tl-item{position:relative;padding:14px 0}
+  .tl-item::before{content:"";position:absolute;left:-11px;top:16px;width:14px;height:14px;border-radius:50%;background:var(--accent);box-shadow:0 0 12px rgba(255,140,0,0.25);border:3px solid rgba(255,255,255,0.03)}
+  .tl-item h4{margin:0;color:#fff;font-size:0.98rem}
+  .tl-item p{margin:6px 0 0;color:#cfe7ff;font-size:0.92rem}
+  .highlight{background:linear-gradient(90deg, rgba(255,200,120,0.12), rgba(255,255,255,0.02));padding:8px;border-radius:8px;border:1px solid rgba(255,255,255,0.03);color:#fff}
+
+  /* footer small */
+  .small-note{font-size:0.9rem;color:var(--muted);margin-top:8px}
+
+  /* responsive */
+  @media(max-width:1040px){
+    .card{grid-template-columns:1fr;max-width:920px}
+    .left{order:2}
+    .right{order:1}
+  }
+  @media(max-width:520px){
+    body{padding:16px}
+    .card{border-radius:14px}
+    .avatar{width:160px;height:160px}
+    .name{font-size:1.25rem}
+  }
+</style>
+</head>
+<body>
+
+  <!-- Animated Abstract Blobs -->
+  <div class="bg-blobs" aria-hidden="true">
+    <div class="blob b1"></div>
+    <div class="blob b2"></div>
+    <div class="blob b3"></div>
+  </div>
+
+  <div class="card" role="main">
+    <!-- LEFT: profile + quick info -->
+    <div class="left">
+      <div class="avatar" title="Creator image">
+        <!-- CHANGE THIS: replace src with your photo path -->
+        <img src="Creator.jpg" alt="Creator Photo">
+      </div>
+
+      <div class="name">Akash Kumar</div> <!-- CHANGE THIS: your name -->
+      <div class="title">Creator · Student · Web Maker</div> <!-- CHANGE THIS: short tagline -->
+
+      <div class="contact" aria-label="contact info">
+        
+        <div class="item"><span>Age</span><span>15</span></div> <!-- CHANGE -->
+        <div class="item"><span>Class</span><span>12th (NIOS)</span></div> <!-- CHANGE -->
+        <div class="item"><span>Location</span><span>Patna, India</span></div> <!-- CHANGE -->
+      </div>
+
+      <div class="cta-row">
+        <button class="btn btn-primary" onclick="scrollToSection('why')">My Story</button>
+        <button class="btn btn-ghost" onclick="scrollToSection('timeline')">Timeline</button>
+      </div>
+
+      <div style="margin-top:18px;text-align:center">
+        <div class="small-note">Connect: <strong style="color:var(--accent)">creator.akash0677@gmail.com</strong></div>
+      </div>
+    </div>
+
+    <!-- RIGHT: detailed sections -->
+    <div class="right">
+      <div class="section">
+        <h3>About Me</h3>
+        <p class="bio">Hi, I am <strong>Akash</strong> — a 15-year-old self-taught web enthusiast who builds tools to solve everyday problems. I love coding, math, and creating simple systems that help people list, sell and collaborate online. This website is a step in that direction.</p>
+      </div>
+
+      <div class="section" id="why">
+        <h3>Why I built <span style="color:var(--accent)">Your Digital Market</span></h3>
+        <p class="bio highlight">I noticed many small sellers struggle to reach customers and needed a simple, trustworthy place to list products and manage approvals. I built this platform to make listing and collaborating easy — with clear steps and a human-first review process.</p>
+        <div class="chips" aria-hidden="true">
+          <div class="chip">Simplicity</div>
+          <div class="chip">Trust</div>
+          <div class="chip">Learning</div>
+          <div class="chip">Community</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Key Problems I Faced</h3>
+        <table class="meta-table" role="table" aria-label="Problems and Solutions">
+          <tr><td>Problem</td><td>Difficulty to list without technical help</td></tr>
+          <tr><td>Problem</td><td>Lack of simple approval workflow for quality control</td></tr>
+          <tr><td>Problem</td><td>New sellers confused about how to present their product</td></tr>
+        </table>
+      </div>
+
+      <div class="section">
+        <h3>Solutions I Implemented</h3>
+        <ul style="color:#dfefff;margin-left:18px">
+          <li>Step-by-step submit & approval flow (admin review)</li>
+          <li>Easy visual listing pages for products and stores</li>
+          <li>Front-end simulator (approve → list) using localStorage</li>
+          <li>Clean, mobile-friendly design that focuses on clarity</li>
+        </ul>
+      </div>
+
+      <div class="section" id="timeline">
+        <h3>Timeline</h3>
+        <div class="timeline">
+          <div class="tl-item">
+            <h4>Started learning web development</h4>
+            <p>2023 — Picked HTML, CSS, and JS; built small projects.</p>
+          </div>
+          <div class="tl-item">
+            <h4>Launched initial marketplace prototype</h4>
+            <p>2024 — Built approval flow and listing pages.</p>
+          </div>
+          <div class="tl-item">
+            <h4>Public testing & improvements</h4>
+            <p>2025 — Feedback loop with users; added search & better UX.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Skills & Interests</h3>
+        <div class="chips">
+          <div class="chip">HTML & CSS</div>
+          <div class="chip">JavaScript</div>
+          <div class="chip">Problem Solving</div>
+          <div class="chip">Design</div>
+          <div class="chip">Entrepreneurship</div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h3>Want to get in touch?</h3>
+        <p class="bio">If you want to collaborate, give feedback or offer opportunities, email me at <strong style="color:var(--accent)">creator.akash0677@gmail.com</strong> or reach via the Contact page.</p>
+      </div>
+
+    </div>
+  </div>
+
+<script>
+  // helper: scroll to section
+  function scrollToSection(id){
+    const el=document.getElementById(id);
+    if(el) el.scrollIntoView({behavior:'smooth', block:'center'});
+  }
+</script>
+
+</body>
+</html>

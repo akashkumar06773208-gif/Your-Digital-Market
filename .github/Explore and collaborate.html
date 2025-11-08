@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore & Collaborate | Your Digital Market</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Poppins", sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #ece9e6, #ffffff);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #1a73e8;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      font-size: 1.8rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 20px;
+      gap: 40px;
+    }
+
+    .section-title {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #1a73e8;
+      margin-bottom: 10px;
+      text-align: center;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: #555;
+      text-align: center;
+      max-width: 700px;
+      margin-bottom: 40px;
+    }
+
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 40px;
+    }
+
+    .card {
+      background-color: #fff;
+      border-radius: 15px;
+      width: 300px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card img {
+      width: 100%;
+      height: 180px;
+      border-radius: 12px;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      font-size: 1.4rem;
+      color: #1a73e8;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      text-decoration: none;
+      background-color: #1a73e8;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .card a:hover {
+      background-color: #155ab6;
+    }
+
+    footer {
+      background-color: #1a73e8;
+      color: #fff;
+      text-align: center;
+      padding: 15px 0;
+      font-size: 0.9rem;
+      letter-spacing: 0.5px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>Explore & Collaborate – Your Digital Market</header>
+
+  <div class="container">
+    <h2 class="section-title">Find What You Need</h2>
+    <p class="section-subtitle">Browse listed stores or explore products shared by verified sellers on Your Digital Market.</p>
+
+    <div class="cards">
+      <!-- Listed Products Card -->
+      <div class="card">
+        <img src="p.jpg" alt="Listed Products">
+        <h3>Listed Products</h3>
+        <p>Explore all the verified and approved products listed by trusted sellers on Your Digital Market.</p>
+        <a href="listed-products.html"></a>
+<button onclick="window.location.href='Explore Products.html'" 
+                  style="background:#ff8c00; padding:8px 15px; border:none; border-radius:20px; color:white; cursor:pointer; margin-top:10px;">
+            Explore Products
+          </button>
+      </div>
+
+      <!-- Listed Stores Card -->
+      <div class="card">
+        <img src="s.jpg" alt="Listed Stores">
+        <h3>Listed Stores</h3>
+        <p>Discover digital stores, creators, and service providers collaborating through Your Digital Market.</p>
+        <a href="listed-stores.html"></a>
+<button onclick="window.location.href='Explore Stores.html'" 
+                  style="background:#ff8c00; padding:8px 15px; border:none; border-radius:20px; color:white; cursor:pointer; margin-top:10px;">
+            Explore Stores
+          </button>
+      </div>
+    </div>
+  </div>
+
+  <footer>© 2025 Your Digital Market. All rights reserved.</footer>
+</body>
+</html>
